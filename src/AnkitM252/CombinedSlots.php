@@ -27,6 +27,12 @@ class CombinedSlots extends PluginBase implements Listener{
 			}
 		}
 	}
+	public function getPlayerCount() : int{
+		return $this->playerCount ?? 0;
+	}
+	public function getMaxPlayerCount(): int{
+		return $this->maxCount ?? 0;
+	}
 	public function onRegenerate(QueryRegenerateEvent $event){
 		$localTotalPlayers = count($this->getServer()->getOnlinePlayers());
 		$localPlayers = $this->getServer()->getMaxPlayers();
